@@ -1,0 +1,75 @@
+module.exports = {
+  theme: {
+    fontFamily: {
+      alt: ['Bebas Neue', 'sans-serif'],
+      body: ['Roboto', 'sans-serif'],
+    },
+    fontSize: {
+      'xs': '.75rem',
+      'sm': '.875rem',
+      'tiny': '.875rem',
+      'base': '1rem',
+      'lg': '1.125rem',
+      'xl': '1.3rem',
+      '2xl': '1.5rem',
+      '3xl': '1.875rem',
+      '4xl': '2.25rem',
+      '5xl': '3rem',
+      '6xl': '4rem',
+      '7xl': '5rem',
+    },
+    fontWeight: {
+      light: 300,
+      normal: 400,
+      medium: 500,
+      bold: 700,
+    },
+    colors: {
+      'transparent': 'transparent',
+      'black': '#000000',
+      'white': '#ffffff',
+      'grey': {
+        '100': '#f3f3f3',
+        '200': '#adadad',
+        '300': '#4c4c4c',
+        '400': '#343434',
+        '500': '#202020',
+      },
+      'red': '#d6151b',
+      'fbBlue': '#067ceb',
+      'green': {
+        '100': '#29bc51',
+        '200': '#1c8c3b',
+      }
+    },
+    spacing: {
+      '0': '0',
+      '1': '0.5rem',
+      '2': '1rem',
+      '3': '1.5rem',
+      '4': '2rem',
+      '5': '2.5rem',
+      '6': '3rem',
+      '7': '4rem',
+      '8': '6rem',
+      '9': '8rem',
+      '10': '10rem',
+      '11': '12rem',
+      '11': '16rem',
+      '12': '20rem',
+      '13': '24rem',
+      '14': '30rem',
+    },
+    container: {
+      center: true,
+      padding: {
+        default: '1rem',
+        sm: '2rem',
+        lg: '4rem',
+        xl: '5rem',
+      },
+    },
+  },
+  variants: {},
+  plugins: []
+}

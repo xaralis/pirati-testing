@@ -1,0 +1,28 @@
+@import "tailwindcss/base";
+
+
+@import "tailwindcss/components";
+@import "./styles/footer.postcss";
+@import "./styles/badges.postcss";
+@import "./styles/buttons.postcss";
+
+@import "tailwindcss/utilities";
+@import "./styles/utils.postcss";
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  @apply font-body font-light;
+  font-size: 0.9333rem;
+
+}
+
+a:hover {
+  @apply underline;
+}
+
+.main-container {
+  margin: auto;
+}

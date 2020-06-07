@@ -1,0 +1,30 @@
+.badge {
+  @apply flex items-center;
+
+  .badge-avatar {
+    @apply rounded-full text-center;
+
+    img {
+      @apply w-7 block;
+    }
+  }
+
+  .badge-body {
+    @apply text-left ml-3;
+  }
+
+  .badge-title {
+    @apply text-lg font-normal;
+  }
+
+  .badge-link {
+    display: inline-block;
+    width: 100%;
+
+    @media (max-width: 1200px) {
+      i {
+        display: none;
+      }
+    }
+  }
+}
