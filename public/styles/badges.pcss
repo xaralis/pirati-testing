@@ -1,0 +1,94 @@
+/**
+ * @molecule Badge
+ * @section Navigation > Badges
+ * @description
+ *  Badge describes a person with some employment. Or a contact person.
+ * @markup
+ *   <div class="badge">
+ *     <div class="badge-avatar">
+ *       <img
+ *         src="@{image:100:100}"
+ *         alt=""
+ *       />
+ *     </div>
+ *     <div class="badge-body">
+ *       <span class="badge-title">Mikuláš Peksa</span>
+ *       <p class="badge-occupation">Předseda krajského sdružení Pardubického kraje</p>
+ *       <a href="tel:+420777123123" class="badge-link is-dimmed">
+ *         <i class="fas fa-envelope"></i> +420 775 609 939
+ *       </a>
+ *       <a href="mailto:example@example.com" class="badge-link is-dimmed">
+ *         <i class="fas fa-envelope"></i> example@example.com
+ *       </a>
+ *     </div>
+ *   </div>
+ */
+.badge {
+  @apply flex items-center font-body;
+
+  .badge-avatar {
+    @apply text-center;
+
+    img {
+      @apply rounded-full w-8 block;
+    }
+  }
+
+  .badge-body {
+    @apply text-left ml-3;
+  }
+
+  .badge-occupation {
+    @apply uppercase max-w-sm my-1;
+  }
+
+  .badge-title {
+    @apply text-xl font-bold;
+  }
+
+  .badge-link {
+    @apply inline-block w-full;
+
+    @media (max-width: 1200px) {
+      i {
+        display: none;
+      }
+    }
+
+    &.is-dimmed {
+      @apply text-grey-300;
+    }
+  }
+}
+
+
+/**
+ * @molecule Condensed badge
+ * @section Navigation > Badges
+ * @description
+ *  A slightly smaller badge.
+ * @markup
+ *   <div class="badge is-condensed">
+ *     <div class="badge-avatar">
+ *       <img
+ *         src="@{image:64:64}"
+ *         alt=""
+ *       />
+ *     </div>
+ *     <div class="badge-body">
+ *       <span class="badge-title">Daniel Lebduška</span>
+ *       <a href="mailto:example@example.com" class="badge-link">
+ *         <i class="fas fa-envelope"></i> example@example.com
+ *       </a>
+ *     </div>
+ *   </div>
+ */
+.badge.is-condensed {
+  .badge-avatar img {
+    @apply w-7 block;
+  }
+
+  .badge-title {
+    @apply text-lg font-normal;
+  }
+}

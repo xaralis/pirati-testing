@@ -1,0 +1,11 @@
+{
+  "title": "Pirate theme",
+  "files": ["public/styles/**/*.pcss", "public/build/colors.css"],
+  "target": "styleguide",
+  "css": "../public/build/tailwind.css",
+  "namespace": "page",
+  "verbose": 3,
+  "counterCSS": null,
+  "staticLipsum": false,
+  "placeholderService": "http://placehold.it/${width}x${height}"
+}

@@ -6,9 +6,9 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
 module.exports = {
   plugins: [
     require('postcss-import'),
-    require('postcss-nested'),
     require('tailwindcss'),
-    require('autoprefixer'),
+    require('postcss-nested'),
+    require('postcss-custom-properties'),
     ...process.env.NODE_ENV === 'production'
       ? [purgecss, require('cssnano')]
       : []

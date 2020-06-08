@@ -71,5 +71,105 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: []
+  textStyles: theme => ({ // defaults to {}
+    heading: {
+      output: false, // this means there won't be a "heading" component in the CSS, but it can be extended
+      fontWeight: theme('fontWeight.bold'),
+      lineHeight: theme('lineHeight.tight'),
+    },
+    h1: {
+      extends: 'heading', // this means all the styles in "heading" will be copied here; "extends" can also be an array to extend multiple text styles
+      fontSize: theme('fontSize.5xl'),
+      '@screen sm': {
+        fontSize: theme('fontSize.6xl'),
+      },
+    },
+    h2: {
+      extends: 'heading',
+      fontSize: theme('fontSize.4xl'),
+      '@screen sm': {
+        fontSize: theme('fontSize.5xl'),
+      },
+    },
+    h3: {
+      extends: 'heading',
+      fontSize: theme('fontSize.4xl'),
+    },
+    h4: {
+      extends: 'heading',
+      fontSize: theme('fontSize.3xl'),
+    },
+    h5: {
+      extends: 'heading',
+      fontSize: theme('fontSize.2xl'),
+    },
+    h6: {
+      extends: 'heading',
+      fontSize: theme('fontSize.xl'),
+    },
+    link: {
+      '&:hover': {
+        textDecoration: 'underline',
+      },
+    },
+    richText: {
+      fontWeight: theme('fontWeight.normal'),
+      fontSize: theme('fontSize.base'),
+      lineHeight: theme('lineHeight.relaxed'),
+      '> * + *': {
+        marginTop: '1em',
+      },
+      'h1': {
+        extends: 'h1',
+      },
+      'h2': {
+        extends: 'h2',
+      },
+      'h3': {
+        extends: 'h3',
+      },
+      'h4': {
+        extends: 'h4',
+      },
+      'h5': {
+        extends: 'h5',
+      },
+      'h6': {
+        extends: 'h6',
+      },
+      'ul': {
+        listStyleType: 'disc',
+      },
+      'ol': {
+        listStyleType: 'decimal',
+      },
+      'a': {
+        extends: 'link',
+      },
+      'b, strong': {
+        fontWeight: theme('fontWeight.bold'),
+      },
+      'i, em': {
+        fontStyle: 'italic',
+      },
+    },
+  }),
+  plugins: [
+    require('tailwind-css-variables')(
+      {
+        // modules
+      },
+      {
+        // options
+      }
+    ),
+    require('tailwindcss-typography')({
+      // all these options default to the values specified here
+      ellipsis: false,         // whether to generate ellipsis utilities
+      hyphens: false,          // whether to generate hyphenation utilities
+      kerning: false,          // whether to generate kerning utilities
+      textUnset: false,        // whether to generate utilities to unset text properties
+      componentPrefix: 'typeset-',  // the prefix to use for text style classes
+    }),
+  ]
 }

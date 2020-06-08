@@ -1,13 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,400&family=Roboto:wght@300;400;500&display=swap');
+
 @import "tailwindcss/base";
 
-
 @import "tailwindcss/components";
-@import "./styles/footer.postcss";
-@import "./styles/badges.postcss";
-@import "./styles/buttons.postcss";
+@import "./styles/footer.pcss";
+@import "./styles/badges.pcss";
+@import "./styles/buttons.pcss";
 
 @import "tailwindcss/utilities";
-@import "./styles/utils.postcss";
+@import "./styles/utils.pcss";
 
 :root {
   font-size: 16px;

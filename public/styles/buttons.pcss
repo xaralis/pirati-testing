@@ -1,9 +1,38 @@
+/**
+ * @atom Button
+ * @section Navigation > Buttons
+ * @description
+ *  Buttons for various purposes.
+ * @modifiers
+ *  .is-green a green button
+ *  .is-inverted an inverted button
+ *  .is-lg bigger button
+ * @markup
+ *   <button class="btn">
+ *     <div class="btn-body">A button</div>
+ *   </button>
+ *   <button class="btn is-green">
+ *     <div class="btn-body">
+ *       A green button
+ *     </div>
+ *   </button>
+ *   <button class="btn is-inverted">
+ *     <div class="btn-body">
+ *       An inverted button
+ *     </div>
+ *   </button>
+ *   <button class="btn is-green is-lg">
+ *     <div class="btn-body">
+ *       A bigger green button
+ *     </div>
+ *   </button>
+ */
 .btn {
   @apply inline-block text-center font-normal max-w-xs;
 
   .btn-body,
   .btn-icon {
-    @apply transition duration-200;
+    @apply transition duration-200 bg-black text-white;
   }
 
   .btn-body {
